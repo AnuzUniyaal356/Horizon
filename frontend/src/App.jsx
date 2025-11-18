@@ -40,8 +40,11 @@ import ManageShort from './pages/ManageShort'
 import ManagePlaylist from './pages/ManagePlaylist'
 import UseGetRecommendation from './customHooks/UseGetRecommendation'
 import RevenuePage from './component/RevenuePage'
+import dotenv from 'dotenv'
 
-export const serverUrl = "http://localhost:8000"
+dotenv.config()
+
+export const serverUrl = process.env.CLIENT_URL
 
 const ProtectedRoute = ({ userData, children }) => {
   if (!userData) {
