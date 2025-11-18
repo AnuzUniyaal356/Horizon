@@ -42,7 +42,10 @@ import UseGetRecommendation from './customHooks/UseGetRecommendation'
 import RevenuePage from './component/RevenuePage'
 
 
-export const serverUrl = import.meta.env.VITE_CLIENT_URL
+
+export const serverUrl = import.meta.env.VITE_SERVER_URL
+
+
 
 const ProtectedRoute = ({ userData, children }) => {
   if (!userData) {
